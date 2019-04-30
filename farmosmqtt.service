@@ -1,0 +1,12 @@
+[Unit]
+Description=Convert LoRaWAN Data to a format suitable for FarmOS
+
+[Service]
+ExecStart=/usr/local/bin/farmosmqtt
+Type=simple
+Restart=always
+User=farmosmqtt
+
+[Install]
+WantedBy=multi-user.target
+

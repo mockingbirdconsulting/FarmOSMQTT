@@ -1,0 +1,2 @@
+#!/bin/bash
+/home/farmosmqtt/FarmOSMQTT/.venv/bin/python /home/farmosmqtt/FarmOSMQTT/farmosmqtt.py

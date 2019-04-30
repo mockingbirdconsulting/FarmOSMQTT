@@ -1,0 +1,17 @@
+---
+database:
+  host: localhost
+  user: farmos
+  password: farmos
+  db_name: farmos
+mqtt:
+  host: my.mqtt.server
+  user: my-mqtt-user
+  password: my-mqtt-password
+  port: 1883
+lora:
+  server_type: loraserverio
+  use_tls: False
+  cert_path: 
+farmos:
+  host: https://my.farmos.installation/
