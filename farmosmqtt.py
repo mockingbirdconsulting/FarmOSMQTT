@@ -94,6 +94,19 @@ def on_message(client, userdata, msg):
             )
         else:
             print("Device name not found in message")
+    if cfg['lora']['server_type'] == "ttnv2":
+        if "dev_id" in message:
+            surl = build_sensor_url(message['dev_id'])
+            sensors = {}
+            for field in message['payload_fields']:
+                sensors[field] = message['payload_fields'][field]
+            sensors['timestamp'] = datetime.now().timestamp()
+            r = requests.post(
+                url = surl,
+                data = json.dumps(sensors)
+            )
+        else:
+            print("Device ID not found in message")
 
 mqc.on_connect = on_connect
 mqc.on_message = on_message
