@@ -10,7 +10,7 @@ mqtt:
   password: my-mqtt-password
   port: 1883
 lora:
-  server_type: loraserverio
+  server_type: loraserverio  # One of either "loraserverio" or "ttnv2"
   use_tls: False
   cert_path: 
 farmos:
